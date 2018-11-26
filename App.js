@@ -60,11 +60,12 @@ export default class App extends Component {
 		const board = cloneBoard(this.state.board)
 		invertFlag(board, row, column)
 		const won = wonGame(board)
-
-		if (won){
-			Alert.alert('Parabéns!', 'Você venceu.');
-			this.setState({board, won})
+	
+		if (won) {
+		  Alert.alert('Parabéns', 'Você Venceu!')
 		}
+	
+		this.setState({ board, won })
 	}
 
   render() {
